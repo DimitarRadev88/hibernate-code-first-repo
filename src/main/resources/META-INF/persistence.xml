@@ -82,5 +82,43 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="hospital">
+        <class>com.softuni.exercise.hospital.entities.Diagnose</class>
+        <class>com.softuni.exercise.hospital.entities.Medicament</class>
+        <class>com.softuni.exercise.hospital.entities.Patient</class>
+        <class>com.softuni.exercise.hospital.entities.Visitation</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/hospital_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="peanutbutter"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="billsPaymentSystem">
+        <class>com.softuni.exercise.billsPaymentSystem.entities.User</class>
+        <class>com.softuni.exercise.billsPaymentSystem.entities.BillingDetail</class>
+        <class>com.softuni.exercise.billsPaymentSystem.entities.BankAccount</class>
+        <class>com.softuni.exercise.billsPaymentSystem.entities.CreditCard</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/bills_payment_system_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="peanutbutter"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
 
 </persistence>

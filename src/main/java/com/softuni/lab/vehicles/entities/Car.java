@@ -1,4 +1,4 @@
-package com.softuni.lab.entities;
+package com.softuni.lab.vehicles.entities;
 
 import jakarta.persistence.*;
 

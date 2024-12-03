@@ -1,4 +1,4 @@
-package com.softuni.lab;
+package com.softuni.lab.vehicles;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

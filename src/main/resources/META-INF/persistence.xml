@@ -6,9 +6,18 @@
              version="2.2">
 
     <persistence-unit name="vehicle">
+        <class>com.softuni.lab.vehicles.entities.Bike</class>
+        <class>com.softuni.lab.vehicles.entities.Car</class>
+        <class>com.softuni.lab.vehicles.entities.Company</class>
+        <class>com.softuni.lab.vehicles.entities.Driver</class>
+        <class>com.softuni.lab.vehicles.entities.Plane</class>
+        <class>com.softuni.lab.vehicles.entities.PlateNumber</class>
+        <class>com.softuni.lab.vehicles.entities.Truck</class>
+        <class>com.softuni.lab.vehicles.entities.Vehicle</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
-            <property name="hibernate.connection.url" 
-                      value="jdbc:mysql://localhost:3306/vehicle?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/vehicles_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="peanutbutter"/>
@@ -17,7 +26,60 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
         </properties>
+    </persistence-unit>
 
+    <persistence-unit name="gringotts">
+        <class>com.softuni.exercise.gringotts.entities.WizardDeposit</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/gringotts_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="peanutbutter"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="sale">
+        <class>com.softuni.exercise.sales.entities.Product</class>
+        <class>com.softuni.exercise.sales.entities.Customer</class>
+        <class>com.softuni.exercise.sales.entities.StoreLocation</class>
+        <class>com.softuni.exercise.sales.entities.Sale</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/sales_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="peanutbutter"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="universitySystem">
+        <class>com.softuni.exercise.universitySystem.entities.Course</class>
+        <class>com.softuni.exercise.universitySystem.entities.Person</class>
+        <class>com.softuni.exercise.universitySystem.entities.Student</class>
+        <class>com.softuni.exercise.universitySystem.entities.Teacher</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/university_system_db?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="peanutbutter"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
     </persistence-unit>
 
 
